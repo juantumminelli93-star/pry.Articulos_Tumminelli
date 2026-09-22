@@ -29,31 +29,221 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblrubro = new System.Windows.Forms.Label();
-            this.cmbRubros = new System.Windows.Forms.ComboBox();
-            this.btnMostrar = new System.Windows.Forms.Button();
+            this.lnkAcercaDe = new System.Windows.Forms.LinkLabel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnExportar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtCantidadArticulos = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.cmbRubros = new System.Windows.Forms.ComboBox();
+            this.lblrubro = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lnkAcercaDe);
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblTitulo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(31, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 401);
+            this.groupBox1.Size = new System.Drawing.Size(508, 563);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta De Articulos";
+            // 
+            // lnkAcercaDe
+            // 
+            this.lnkAcercaDe.AutoSize = true;
+            this.lnkAcercaDe.Location = new System.Drawing.Point(174, 538);
+            this.lnkAcercaDe.Name = "lnkAcercaDe";
+            this.lnkAcercaDe.Size = new System.Drawing.Size(121, 13);
+            this.lnkAcercaDe.TabIndex = 6;
+            this.lnkAcercaDe.TabStop = true;
+            this.lnkAcercaDe.Text = "Acerca De Este Trabajo";
+            this.lnkAcercaDe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAcercaDe_LinkClicked);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnExportar);
+            this.groupBox4.Controls.Add(this.txtTotal);
+            this.groupBox4.Controls.Add(this.txtCantidadArticulos);
+            this.groupBox4.Controls.Add(this.lblTotal);
+            this.groupBox4.Controls.Add(this.lblCantidad);
+            this.groupBox4.Location = new System.Drawing.Point(71, 448);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(362, 71);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(211, 17);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(130, 48);
+            this.btnExportar.TabIndex = 3;
+            this.btnExportar.Text = "Exportar CSV";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(121, 17);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(61, 20);
+            this.txtTotal.TabIndex = 3;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            // 
+            // txtCantidadArticulos
+            // 
+            this.txtCantidadArticulos.Location = new System.Drawing.Point(121, 45);
+            this.txtCantidadArticulos.Name = "txtCantidadArticulos";
+            this.txtCantidadArticulos.Size = new System.Drawing.Size(61, 20);
+            this.txtCantidadArticulos.TabIndex = 2;
+            this.txtCantidadArticulos.TextChanged += new System.EventHandler(this.txtCantidadArticulos_TextChanged);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(6, 43);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(105, 13);
+            this.lblTotal.TabIndex = 1;
+            this.lblTotal.Text = "Total Valor En Stock";
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(6, 20);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(109, 13);
+            this.lblCantidad.TabIndex = 0;
+            this.lblCantidad.Text = "Cantidad De Articulos";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Location = new System.Drawing.Point(26, 194);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(461, 231);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Lista De Articulos ";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dataGridView1.Location = new System.Drawing.Point(14, 19);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(436, 195);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 80F;
+            this.Column2.HeaderText = "Descripcion";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 50F;
+            this.Column3.HeaderText = "Costo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 50F;
+            this.Column4.HeaderText = "Stock";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Valor En Stock";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnMostrar);
+            this.groupBox2.Controls.Add(this.cmbRubros);
+            this.groupBox2.Controls.Add(this.lblrubro);
+            this.groupBox2.Location = new System.Drawing.Point(45, 58);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(322, 102);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filtro De Consulta";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(73, 53);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(213, 33);
+            this.btnMostrar.TabIndex = 2;
+            this.btnMostrar.Text = "Mostrar Articulos";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // cmbRubros
+            // 
+            this.cmbRubros.FormattingEnabled = true;
+            this.cmbRubros.Location = new System.Drawing.Point(73, 26);
+            this.cmbRubros.Name = "cmbRubros";
+            this.cmbRubros.Size = new System.Drawing.Size(213, 21);
+            this.cmbRubros.TabIndex = 1;
+            this.cmbRubros.SelectedIndexChanged += new System.EventHandler(this.cmbRubros_SelectedIndexChanged);
+            // 
+            // lblrubro
+            // 
+            this.lblrubro.AutoSize = true;
+            this.lblrubro.Location = new System.Drawing.Point(23, 29);
+            this.lblrubro.Name = "lblrubro";
+            this.lblrubro.Size = new System.Drawing.Size(36, 13);
+            this.lblrubro.TabIndex = 0;
+            this.lblrubro.Text = "Rubro";
+            this.lblrubro.Click += new System.EventHandler(this.lblrubro_Click);
             // 
             // lblTitulo
             // 
@@ -65,91 +255,24 @@
             this.lblTitulo.Text = "Seleccione un rubro para consultar sus articulos y su valor en stock";
             this.lblTitulo.Click += new System.EventHandler(this.label1_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnExportar);
-            this.groupBox2.Controls.Add(this.btnMostrar);
-            this.groupBox2.Controls.Add(this.cmbRubros);
-            this.groupBox2.Controls.Add(this.lblrubro);
-            this.groupBox2.Location = new System.Drawing.Point(45, 58);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(322, 130);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Filtro De Consulta";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // lblrubro
-            // 
-            this.lblrubro.AutoSize = true;
-            this.lblrubro.Location = new System.Drawing.Point(17, 26);
-            this.lblrubro.Name = "lblrubro";
-            this.lblrubro.Size = new System.Drawing.Size(36, 13);
-            this.lblrubro.TabIndex = 0;
-            this.lblrubro.Text = "Rubro";
-            this.lblrubro.Click += new System.EventHandler(this.lblrubro_Click);
-            // 
-            // cmbRubros
-            // 
-            this.cmbRubros.FormattingEnabled = true;
-            this.cmbRubros.Location = new System.Drawing.Point(73, 26);
-            this.cmbRubros.Name = "cmbRubros";
-            this.cmbRubros.Size = new System.Drawing.Size(213, 21);
-            this.cmbRubros.TabIndex = 1;
-            // 
-            // btnMostrar
-            // 
-            this.btnMostrar.Location = new System.Drawing.Point(112, 91);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(130, 23);
-            this.btnMostrar.TabIndex = 2;
-            this.btnMostrar.Text = "Mostrar Articulos";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.Location = new System.Drawing.Point(112, 63);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(130, 23);
-            this.btnExportar.TabIndex = 3;
-            this.btnExportar.Text = "Exportar CSV";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(272, 120);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(28, 194);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(339, 176);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(571, 596);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmArticulos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Articulos Por Rubros ";
+            this.Load += new System.EventHandler(this.frmArticulos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,6 +288,17 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtCantidadArticulos;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.LinkLabel lnkAcercaDe;
     }
 }
 
