@@ -21,5 +21,10 @@ namespace pry.Articulos_Tumminelli
         {
 
         }
+
+        private void frmAcercaDe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

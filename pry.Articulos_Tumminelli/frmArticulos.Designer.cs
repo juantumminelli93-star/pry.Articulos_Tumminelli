@@ -57,11 +57,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.DodgerBlue;
             this.groupBox1.Controls.Add(this.lnkAcercaDe);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblTitulo);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(31, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(508, 563);
@@ -72,9 +74,9 @@
             // lnkAcercaDe
             // 
             this.lnkAcercaDe.AutoSize = true;
-            this.lnkAcercaDe.Location = new System.Drawing.Point(174, 538);
+            this.lnkAcercaDe.Location = new System.Drawing.Point(205, 544);
             this.lnkAcercaDe.Name = "lnkAcercaDe";
-            this.lnkAcercaDe.Size = new System.Drawing.Size(121, 13);
+            this.lnkAcercaDe.Size = new System.Drawing.Size(131, 16);
             this.lnkAcercaDe.TabIndex = 6;
             this.lnkAcercaDe.TabStop = true;
             this.lnkAcercaDe.Text = "Acerca De Este Trabajo";
@@ -82,6 +84,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox4.Controls.Add(this.btnExportar);
             this.groupBox4.Controls.Add(this.txtTotal);
             this.groupBox4.Controls.Add(this.txtCantidadArticulos);
@@ -95,27 +98,28 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(211, 17);
+            this.btnExportar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnExportar.Location = new System.Drawing.Point(226, 17);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(130, 48);
             this.btnExportar.TabIndex = 3;
             this.btnExportar.Text = "Exportar CSV";
-            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(121, 17);
+            this.txtTotal.Location = new System.Drawing.Point(137, 17);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(61, 20);
+            this.txtTotal.Size = new System.Drawing.Size(61, 22);
             this.txtTotal.TabIndex = 3;
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // txtCantidadArticulos
             // 
-            this.txtCantidadArticulos.Location = new System.Drawing.Point(121, 45);
+            this.txtCantidadArticulos.Location = new System.Drawing.Point(137, 45);
             this.txtCantidadArticulos.Name = "txtCantidadArticulos";
-            this.txtCantidadArticulos.Size = new System.Drawing.Size(61, 20);
+            this.txtCantidadArticulos.Size = new System.Drawing.Size(61, 22);
             this.txtCantidadArticulos.TabIndex = 2;
             this.txtCantidadArticulos.TextChanged += new System.EventHandler(this.txtCantidadArticulos_TextChanged);
             // 
@@ -124,7 +128,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(6, 43);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(105, 13);
+            this.lblTotal.Size = new System.Drawing.Size(118, 16);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "Total Valor En Stock";
             // 
@@ -133,7 +137,7 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Location = new System.Drawing.Point(6, 20);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(109, 13);
+            this.lblCantidad.Size = new System.Drawing.Size(125, 16);
             this.lblCantidad.TabIndex = 0;
             this.lblCantidad.Text = "Cantidad De Articulos";
             // 
@@ -205,10 +209,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox2.Controls.Add(this.btnMostrar);
             this.groupBox2.Controls.Add(this.cmbRubros);
             this.groupBox2.Controls.Add(this.lblrubro);
-            this.groupBox2.Location = new System.Drawing.Point(45, 58);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox2.Location = new System.Drawing.Point(90, 63);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(322, 102);
             this.groupBox2.TabIndex = 2;
@@ -218,12 +225,14 @@
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(73, 53);
+            this.btnMostrar.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnMostrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMostrar.Location = new System.Drawing.Point(73, 56);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(213, 33);
             this.btnMostrar.TabIndex = 2;
             this.btnMostrar.Text = "Mostrar Articulos";
-            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // cmbRubros
@@ -231,16 +240,17 @@
             this.cmbRubros.FormattingEnabled = true;
             this.cmbRubros.Location = new System.Drawing.Point(73, 26);
             this.cmbRubros.Name = "cmbRubros";
-            this.cmbRubros.Size = new System.Drawing.Size(213, 21);
+            this.cmbRubros.Size = new System.Drawing.Size(213, 24);
             this.cmbRubros.TabIndex = 1;
             this.cmbRubros.SelectedIndexChanged += new System.EventHandler(this.cmbRubros_SelectedIndexChanged);
             // 
             // lblrubro
             // 
             this.lblrubro.AutoSize = true;
+            this.lblrubro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblrubro.Location = new System.Drawing.Point(23, 29);
             this.lblrubro.Name = "lblrubro";
-            this.lblrubro.Size = new System.Drawing.Size(36, 13);
+            this.lblrubro.Size = new System.Drawing.Size(41, 16);
             this.lblrubro.TabIndex = 0;
             this.lblrubro.Text = "Rubro";
             this.lblrubro.Click += new System.EventHandler(this.lblrubro_Click);
@@ -248,9 +258,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(6, 26);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(68, 28);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(325, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(369, 16);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Seleccione un rubro para consultar sus articulos y su valor en stock";
             this.lblTitulo.Click += new System.EventHandler(this.label1_Click);
@@ -259,6 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(571, 596);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmArticulos";
